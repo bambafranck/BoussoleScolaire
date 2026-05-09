@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoussoleScolaire - Résultats</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/resultats.css">
+</head>
+<body>
+
+  <div class="page-indicator">
+    <div class="dot"></div> 
+    Page : Résultats du Test (resultats.php)
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">🧭</div>
+      <div class="logo-text">Boussole<span>Scolaire</span></div>
+    </a>
+    <div class="nav-right">
+      <div class="nav-user">Bonjour, <strong>Franck</strong></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="result-hero">
+    <div class="result-badge">🎉 Test Terminé !</div>
+    <h1>Vos résultats sont <span>prêts</span></h1>
+    <p>Voici vos recommandations personnalisées basées sur votre profil et vos réponses.</p>
+  </div>
+
+  <!-- SCORE CIRCLE -->
+  <div style="background:#fff; position:relative; z-index:2;">
+    <div class="score-circle" style="margin-top:-80px;">
+      <svg class="score-ring" viewBox="0 0 160 160">
+        <defs>
+          <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00c878"/>
+            <stop offset="100%" stop-color="#ff8c3a"/>
+          </linearGradient>
+        </defs>
+        <circle class="bg" cx="80" cy="80" r="64"/>
+        <circle class="fill" cx="80" cy="80" r="64" 
+          stroke-dasharray="402" stroke-dashoffset="120"
+          transform="rotate(-90 80 80)"/>
+      </svg>
+      <div class="score-number">78%</div>
+      <div class="score-label">Score global</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <!-- LEFT COLUMN -->
+    <div>
+      <div class="section-title">🎯 Filières Recommandées</div>
+
+      <!-- Filière 1 -->
+      <div class="filiere-card">
+        <div class="filiere-header">
+          <div class="filiere-icon">💻</div>
+          <div class="filiere-info">
+            <h4>Informatique & Développement</h4>
+            <p>Génie logiciel, IA, Cybersécurité</p>
+          </div>
+          <div class="filiere-match">92% <span>match</span></div>
+        </div>
+        <div class="filiere-details">
+          <div class="filiere-detail-item"><strong>Durée :</strong> 3-5 ans</div>
+          <div class="filiere-detail-item"><strong>Coût :</strong> 500 000 FCFA</div>
+          <div class="filiere-detail-item"><strong>Débouchés :</strong> Développeur, Chef projet</div>
+        </div>
+      </div>
+
+      <!-- Filière 2 -->
+      <div class="filiere-card">
+        <div class="filiere-header">
+          <div class="filiere-icon">🔬</div>
+          <div class="filiere-info">
+            <h4>Sciences & Recherche</h4>
+            <p>Biologie, Chimie, Physique</p>
+          </div>
+          <div class="filiere-match">78% <span>match</span></div>
+        </div>
+        <div class="filiere-details">
+          <div class="filiere-detail-item"><strong>Durée :</strong> 4-6 ans</div>
+          <div class="filiere-detail-item"><strong>Coût :</strong> 400 000 FCFA</div>
+          <div class="filiere-detail-item"><strong>Débouchés :</strong> Chercheur, Ingénieur</div>
+        </div>
+      </div>
+
+      <!-- Filière 3 -->
+      <div class="filiere-card">
+        <div class="filiere-header">
+          <div class="filiere-icon">📈</div>
+          <div class="filiere-info">
+            <h4>Commerce & Management</h4>
+            <p>Marketing, Finance, Entrepreneuriat</p>
+          </div>
+          <div class="filiere-match">65% <span>match</span></div>
+        </div>
+        <div class="filiere-details">
+          <div class="filiere-detail-item"><strong>Durée :</strong> 3 ans</div>
+          <div class="filiere-detail-item"><strong>Coût :</strong> 350 000 FCFA</div>
+          <div class="filiere-detail-item"><strong>Débouchés :</strong> Manager, Entrepreneur</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+      <!-- COMPÉTENCES -->
+      <div class="card-box">
+        <div class="section-title">📊 Vos Compétences</div>
+        <div class="skill-row">
+          <span class="skill-label">Logique</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar green" style="width:88%"></div>
+          </div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Créativité</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar orange" style="width:72%"></div>
+          </div>
+          <span class="skill-pct">72%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Communication</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar blue" style="width:65%"></div>
+          </div>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Analyse</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar purple" style="width:80%"></div>
+          </div>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Leadership</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar green" style="width:55%"></div>
+          </div>
+          <span class="skill-pct">55%</span>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="card-box">
+        <div class="section-title">⚡ Actions</div>
+        <div class="action-btns">
+          <button class="btn-action-primary">
+            <span class="action-icon">📥</span> Télécharger Résultats (PDF)
+          </button>
+          <button class="btn-action">
+            <span class="action-icon">💾</span> Sauvegarder les Formations
+          </button>
+          <button class="btn-action">
+            <span class="action-icon">🔄</span> Comparer les Formations
+          </button>
+          <button class="btn-action">
+            <span class="action-icon">🔍</span> Rechercher Filière / École
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

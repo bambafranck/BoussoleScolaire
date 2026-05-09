@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoussoleScolaire - Admin Dashboard</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="page-indicator">
+    <div class="dot"></div> 
+    Page : Tableau de Bord Admin (admin.php)
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">🧭</div>
+      <div class="sidebar-logo-text">Boussole<span>Scolaire</span></div>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-label">Principal</div>
+      <a class="menu-item active">
+        <span class="menu-icon">📊</span> Tableau de Bord
+      </a>
+      <a class="menu-item">
+        <span class="menu-icon">👥</span> Utilisateurs 
+        <span class="menu-badge">12</span>
+      </a>
+      <a class="menu-item">
+        <span class="menu-icon">📚</span> Filières
+      </a>
+      <a class="menu-item">
+        <span class="menu-icon">🏫</span> Établissements
+      </a>
+
+      <div class="menu-label">Gestion</div>
+      <a class="menu-item">
+        <span class="menu-icon">❓</span> Questions du Test
+      </a>
+      <a class="menu-item">
+        <span class="menu-icon">✅</span> Valider Données
+      </a>
+      <a class="menu-item">
+        <span class="menu-icon">📈</span> Statistiques
+      </a>
+
+      <div class="menu-label">Système</div>
+      <a class="menu-item">
+        <span class="menu-icon">⚙️</span> Paramètres
+      </a>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">👨‍💼</div>
+        <div class="sidebar-user-info">
+          <h5>Administrateur</h5>
+          <p>admin@boussolescolaire.com</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <h1>👋 Tableau de Bord</h1>
+        <p>Bienvenue, voici un résumé de votre plateforme</p>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <span>🔍</span>
+          <input type="text" placeholder="Rechercher...">
+        </div>
+        <button class="btn-add">+ Ajouter</button>
+      </div>
+    </div>
+
+    <!-- STAT CARDS -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-bg" style="background: var(--green)"></div>
+        <div class="stat-top">
+          <div class="stat-icon g">👥</div>
+          <div class="stat-change up">↑ +12%</div>
+        </div>
+        <h2>1,248</h2>
+        <p>Utilisateurs Actifs</p>
+        <div class="mini-bars">
+          <div class="mini-bar g" style="height: 60%"></div>
+          <div class="mini-bar g" style="height: 45%"></div>
+          <div class="mini-bar g" style="height: 70%"></div>
+          <div class="mini-bar g" style="height: 55%"></div>
+          <div class="mini-bar g" style="height: 80%"></div>
+          <div class="mini-bar g" style="height: 65%"></div>
+          <div class="mini-bar g" style="height: 100%"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-bg" style="background: var(--orange)"></div>
+        <div class="stat-top">
+          <div class="stat-icon o">🧪</div>
+          <div class="stat-change up">↑ +8%</div>
+        </div>
+        <h2>842</h2>
+        <p>Tests Effectués</p>
+        <div class="mini-bars">
+          <div class="mini-bar o" style="height: 50%"></div>
+          <div class="mini-bar o" style="height: 65%"></div>
+          <div class="mini-bar o" style="height: 40%"></div>
+          <div class="mini-bar o" style="height: 75%"></div>
+          <div class="mini-bar o" style="height: 60%"></div>
+          <div class="mini-bar o" style="height: 90%"></div>
+          <div class="mini-bar o" style="height: 100%"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-bg" style="background: #4f86f7"></div>
+        <div class="stat-top">
+          <div class="stat-icon b">📚</div>
+          <div class="stat-change up">↑ +3</div>
+        </div>
+        <h2>156</h2>
+        <p>Filières Disponibles</p>
+        <div class="mini-bars">
+          <div class="mini-bar b" style="height: 70%"></div>
+          <div class="mini-bar b" style="height: 70%"></div>
+          <div class="mini-bar b" style="height: 70%"></div>
+          <div class="mini-bar b" style="height: 70%"></div>
+          <div class="mini-bar b" style="height: 75%"></div>
+          <div class="mini-bar b" style="height: 80%"></div>
+          <div class="mini-bar b" style="height: 100%"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-bg" style="background: #a855f7"></div>
+        <div class="stat-top">
+          <div class="stat-icon p">🏫</div>
+          <div class="stat-change down">↓ -1</div>
+        </div>
+        <h2>38</h2>
+        <p>Établissements</p>
+        <div class="mini-bars">
+          <div class="mini-bar p" style="height: 85%"></div>
+          <div class="mini-bar p" style="height: 85%"></div>
+          <div class="mini-bar p" style="height: 90%"></div>
+          <div class="mini-bar p" style="height: 90%"></div>
+          <div class="mini-bar p" style="height: 90%"></div>
+          <div class="mini-bar p" style="height: 85%"></div>
+          <div class="mini-bar p" style="height: 100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOWER GRID -->
+    <div class="lower-grid">
+      <!-- USERS TABLE -->
+      <div class="card">
+        <div class="card-header">
+          <h3>👥 Derniers Utilisateurs</h3>
+          <a href="#">Voir tous →</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Utilisateur</th>
+              <th>Niveau</th>
+              <th>Statut</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="td-user">
+                  <div class="td-avatar">FK</div>
+                  <div>
+                    <div class="td-name">Franck Karim</div>
+                    <div class="td-email">franck@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Étudiant</td>
+              <td><span class="badge green">Actif</span></td>
+              <td>24 Jan 2026</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-user">
+                  <div class="td-avatar" style="background: linear-gradient(135deg, var(--orange), #ffb366)">AM</div>
+                  <div>
+                    <div class="td-name">Amina Moussa</div>
+                    <div class="td-email">amina@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Lycéen</td>
+              <td><span class="badge orange">En test</span></td>
+              <td>23 Jan 2026</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-user">
+                  <div class="td-avatar" style="background: linear-gradient(135deg, #4f86f7, #7aacff)">DJ</div>
+                  <div>
+                    <div class="td-name">David Joubert</div>
+                    <div class="td-email">david@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Lycéen</td>
+              <td><span class="badge green">Actif</span></td>
+              <td>22 Jan 2026</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-user">
+                  <div class="td-avatar" style="background: linear-gradient(135deg, #a855f7, #c084fc)">SL</div>
+                  <div>
+                    <div class="td-name">Sarah Lebeau</div>
+                    <div class="td-email">sarah@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Étudiant</td>
+              <td><span class="badge blue">Terminé</span></td>
+              <td>21 Jan 2026</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-user">
+                  <div class="td-avatar" style="background: linear-gradient(135deg, #ef4444, #f87171)">KT</div>
+                  <div>
+                    <div class="td-name">Kofi Tchangbé</div>
+                    <div class="td-email">kofi@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Lycéen</td>
+              <td><span class="badge green">Actif</span></td>
+              <td>20 Jan 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <div class="card" style="margin-bottom: 22px">
+          <div class="card-header">
+            <h3>🔔 Activités Récentes</h3>
+            <a href="#">Tout voir →</a>
+          </div>
+          <div class="recent-card">
+            <div class="recent-icon g">✅</div>
+            <div>
+              <h5>Test complété</h5>
+              <p>Franck Karim a terminé son test</p>
+            </div>
+            <span class="time">Il y a 2h</span>
+          </div>
+          <div class="recent-card">
+            <div class="recent-icon o">📚</div>
+            <div>
+              <h5>Nouvelle filière</h5>
+              <p>«Informatique» a été ajoutée</p>
+            </div>
+            <span class="time">Il y a 5h</span>
+          </div>
+          <div class="recent-card">
+            <div class="recent-icon b">👤</div>
+            <div>
+              <h5>Nouvel utilisateur</h5>
+              <p>Amina Moussa s'est inscrite</p>
+            </div>
+            <span class="time">Hier</span>
+          </div>
+          <div class="recent-card">
+            <div class="recent-icon o">🏫</div>
+            <div>
+              <h5>Établissement mis à jour</h5>
+              <p>«École Polytechnique» modifié</p>
+            </div>
+            <span class="time">Hier</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>📊 Statistiques Rapides</h3>
+          </div>
+          <div style="display: flex; justify-content: space-between; text-align: center">
+            <div>
+              <div style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 800; color: var(--green)">94%</div>
+              <div style="font-size: 12px; color: #9ca3af">Satisfaction</div>
+            </div>
+            <div>
+              <div style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 800; color: var(--orange)">4.2</div>
+              <div style="font-size: 12px; color: #9ca3af">Moy. Score</div>
+            </div>
+            <div>
+              <div style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 800; color: #4f86f7">67</div>
+              <div style="font-size: 12px; color: #9ca3af">Ce mois</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

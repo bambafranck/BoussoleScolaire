@@ -1,0 +1,24 @@
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Configuration locale (contient identifiants DB)
+config/database.php
+
+# Dossier Claude Code
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
+
+# Dépendances (si utilisées)
+vendor/
+node_modules/
