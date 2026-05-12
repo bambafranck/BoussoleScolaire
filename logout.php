@@ -13,7 +13,7 @@ if (isset($_COOKIE[session_name()])) {
 
 session_destroy();
 
-$base_path = '/BoursoleScolaire';
+$base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 ?>
 <!DOCTYPE html>
 <html lang="fr">

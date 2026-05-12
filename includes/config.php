@@ -4,12 +4,11 @@
  * Fichier: includes/config.php
  */
 
-// Chemin de base du projet
-$base_path = '/BoursoleScolaire';  // CHANGEZ selon votre dossier
+// Détection automatique du chemin de base (fonctionne local ET hébergé)
+$base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
-// Autres configurations si nécessaire
 define('SITE_NAME', 'BoussoleScolaire');
-define('SITE_URL', 'http://localhost' . $base_path);
+define('SITE_URL', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . $base_path);
 
 // Retourner la configuration (optionnel)
 return [

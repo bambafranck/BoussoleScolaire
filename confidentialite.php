@@ -6,7 +6,6 @@
 
 session_start();
 
-$base_path = '/BoursoleScolaire';
 $page_title = "Politique de Confidentialité";
 $page_css = "index";
 

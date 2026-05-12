@@ -20,8 +20,6 @@ function isEmoji($str) {
 
 $user_id = $_SESSION['user_id'];
 $user_type = $_SESSION['user_type'] ?? 'etudiant';
-$base_path = '/BoursoleScolaire';
-
 // Vérifier que l'utilisateur existe en base (session potentiellement périmée)
 $stmt = $pdo->prepare("SELECT id_utilisateur FROM utilisateur WHERE id_utilisateur = ?");
 $stmt->execute([$user_id]);

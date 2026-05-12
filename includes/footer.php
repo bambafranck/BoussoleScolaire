@@ -5,7 +5,7 @@
  */
 
 if (!isset($base_path)) {
-    $base_path = '/BoursoleScolaire';
+    $base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 }
 ?>
 

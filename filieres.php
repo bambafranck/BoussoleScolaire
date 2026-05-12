@@ -9,7 +9,6 @@ session_start();
 
 $page_title = "Filières";
 $page_css = "index";
-$base_path = '/BoursoleScolaire';
 
 require_once 'config/database.php';
 

@@ -8,7 +8,6 @@ session_start();
 
 $page_title = "À Propos";
 $page_css = "index";
-$base_path = '/BoursoleScolaire';
 
 include 'includes/header.php';
 ?>

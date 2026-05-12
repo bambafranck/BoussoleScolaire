@@ -8,7 +8,6 @@ session_start();
 
 $page_title = "Accueil";
 $page_css   = "index";
-$base_path  = '/BoursoleScolaire';
 
 include 'includes/header.php';
 // Note: header.php charge déjà Lucide et appelle lucide.createIcons()

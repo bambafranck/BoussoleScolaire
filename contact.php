@@ -8,7 +8,6 @@ session_start();
 
 $page_title = "Contact";
 $page_css = "index";
-$base_path = '/BoursoleScolaire';
 
 // Traitement du formulaire
 $message_envoye = false;

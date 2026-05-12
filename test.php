@@ -14,8 +14,6 @@ if (!isLoggedIn() || isAdmin()) {
 
 $user_id   = $_SESSION['user_id'];
 $user_type = $_SESSION['user_type'] ?? 'etudiant';
-$base_path = '/BoussoleScolaire';
-
 $page_title = "Test d'Orientation";
 $page_css   = "test";
 include 'includes/header.php';

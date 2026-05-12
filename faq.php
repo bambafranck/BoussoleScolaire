@@ -6,7 +6,6 @@
 
 session_start();
 
-$base_path = '/BoursoleScolaire';
 $page_title = "FAQ - Questions Fréquentes";
 $page_css = "index";
 
