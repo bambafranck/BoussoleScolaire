@@ -4,12 +4,8 @@
  * Fichier: detail_formation.php
  */
 
-try {
-    $pdo = new PDO("mysql:host=localhost;dbname=boussolescolaire;charset=utf8mb4", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur : " . $e->getMessage());
-}
+session_start();
+require_once 'config/database.php';
 
 $id_offre = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 if (!$id_offre) {
@@ -22,8 +18,8 @@ function isEmoji($str) {
 }
 
 $stmt = $pdo->prepare("
-    SELECT 
-        o.id_offre, o.titre_offre, o.type_formation, o.duree, o.cout,
+    SELECT
+        o.id_offre, o.titre_offre, o.type_formation, o.duree, o.cout, o.id_etablissement,
         o.places_disponibles, o.date_debut, o.date_limite_inscription,
         f.nom_filiere, f.description as filiere_description, f.icone, f.debouches,
         e.nom_etablissement, e.ville, e.type_etablissement, e.adresse, e.email, e.telephone, e.site_web
@@ -119,6 +115,46 @@ $autres_formations = $stmt->fetchAll(PDO::FETCH_ASSOC);
         .deadline-box .lucide { width: 18px; height: 18px; color: #92400e; margin-top: 2px; flex-shrink: 0; }
         .location-row { display: flex; align-items: center; gap: 6px; color: #6b7280; margin: 12px 0; }
         .location-row .lucide { width: 15px; height: 15px; }
+        .btn-info-etablissement {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #4f86f7 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(79, 134, 247, 0.3);
+            margin-top: 16px;
+        }
+        .btn-info-etablissement:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 134, 247, 0.4);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        .btn-info-etablissement i { width: 20px; height: 20px; }
+        .info-message {
+            background: #eff6ff;
+            border-left: 4px solid #4f86f7;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #1e40af;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-message .lucide {
+            width: 18px;
+            height: 18px;
+            color: #4f86f7;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -223,7 +259,16 @@ $autres_formations = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <i data-lucide="building-2"></i> Établissement
         </div>
         <div class="etablissement-box">
-            <h3><?php echo htmlspecialchars($formation['nom_etablissement']); ?></h3>
+            <h3>
+                <?php if (!empty($formation['site_web'])): ?>
+                <a href="<?php echo htmlspecialchars($formation['site_web']); ?>" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                    <?php echo htmlspecialchars($formation['nom_etablissement']); ?>
+                    <i data-lucide="external-link" style="width:22px;height:22px;color:#ff8c3a;"></i>
+                </a>
+                <?php else: ?>
+                <?php echo htmlspecialchars($formation['nom_etablissement']); ?>
+                <?php endif; ?>
+            </h3>
             <span class="badge badge-blue">
                 <?php echo ucfirst(str_replace('_', ' ', htmlspecialchars($formation['type_etablissement']))); ?>
             </span>
@@ -253,11 +298,31 @@ $autres_formations = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <?php endif; ?>
             </div>
-            <?php if ($formation['site_web']): ?>
-            <a href="<?php echo htmlspecialchars($formation['site_web']); ?>" target="_blank" class="btn-website">
-                <i data-lucide="external-link"></i> Visiter le site
-            </a>
-            <?php endif; ?>
+
+            <div class="info-message">
+                <i data-lucide="info"></i>
+                <span>Pour plus d'informations sur cette formation, contactez directement l'établissement</span>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <?php if ($formation['site_web']): ?>
+                <a href="<?php echo htmlspecialchars($formation['site_web']); ?>" target="_blank" class="btn-website">
+                    <i data-lucide="external-link"></i> Visiter le site
+                </a>
+                <?php endif; ?>
+
+                <?php if ($formation['email']): ?>
+                <a href="mailto:<?php echo htmlspecialchars($formation['email']); ?>?subject=Demande d'information - <?php echo urlencode($formation['titre_offre']); ?>" class="btn-info-etablissement">
+                    <i data-lucide="mail"></i> Envoyer un email
+                </a>
+                <?php endif; ?>
+
+                <?php if ($formation['telephone']): ?>
+                <a href="tel:<?php echo htmlspecialchars($formation['telephone']); ?>" class="btn-info-etablissement">
+                    <i data-lucide="phone"></i> Appeler
+                </a>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 

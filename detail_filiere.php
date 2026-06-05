@@ -332,6 +332,34 @@ include 'includes/header.php';
     color: #1a1a2e;
     font-weight: 600;
 }
+
+.btn-info-etablissement {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #4f86f7 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(79, 134, 247, 0.3);
+    margin-top: 20px;
+}
+
+.btn-info-etablissement:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 134, 247, 0.4);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.btn-info-etablissement i {
+    width: 20px;
+    height: 20px;
+}
 </style>
 
 <div class="hero-section">
@@ -341,10 +369,18 @@ include 'includes/header.php';
         </div>
         <h1 class="hero-title"><?php echo htmlspecialchars($filiere['nom_filiere']); ?></h1>
         <p class="hero-description"><?php echo htmlspecialchars($filiere['description']); ?></p>
-        <a href="filieres.php" class="btn-back">
-            <i data-lucide="arrow-left" style="width:20px;height:20px;"></i>
-            Retour aux filières
-        </a>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 30px;">
+            <a href="filieres.php" class="btn-back">
+                <i data-lucide="arrow-left" style="width:20px;height:20px;"></i>
+                Retour aux filières
+            </a>
+            <?php if (count($etablissements) > 0): ?>
+            <a href="#etablissements" class="btn-info-etablissement">
+                <i data-lucide="building-2" style="width:20px;height:20px;"></i>
+                Voir les établissements (<?php echo count($etablissements); ?>)
+            </a>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 
@@ -437,7 +473,7 @@ include 'includes/header.php';
 
     <!-- Établissements -->
     <?php if (count($etablissements) > 0): ?>
-    <div class="content-card">
+    <div class="content-card" id="etablissements">
         <div class="section-title">
             <i data-lucide="map-pin"></i>
             Où étudier cette filière ? (<?php echo count($etablissements); ?> établissement<?php echo count($etablissements) > 1 ? 's' : ''; ?>)
@@ -445,7 +481,16 @@ include 'includes/header.php';
         
         <?php foreach ($etablissements as $etab): ?>
         <div class="etablissement-card">
-            <div class="etablissement-name"><?php echo htmlspecialchars($etab['nom_etablissement']); ?></div>
+            <div class="etablissement-name">
+                <?php if (!empty($etab['site_web'])): ?>
+                <a href="<?php echo htmlspecialchars($etab['site_web']); ?>" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <?php echo htmlspecialchars($etab['nom_etablissement']); ?>
+                    <i data-lucide="external-link" style="width:20px;height:20px;color:#00c878;"></i>
+                </a>
+                <?php else: ?>
+                <?php echo htmlspecialchars($etab['nom_etablissement']); ?>
+                <?php endif; ?>
+            </div>
             
             <div class="etablissement-info">
                 <div class="etablissement-tag">
@@ -470,14 +515,14 @@ include 'includes/header.php';
                     <div class="contact-value"><?php echo htmlspecialchars($etab['email']); ?></div>
                 </div>
                 <?php endif; ?>
-                
+
                 <?php if ($etab['telephone']): ?>
                 <div class="contact-item">
                     <div class="contact-label">Téléphone</div>
                     <div class="contact-value"><?php echo htmlspecialchars($etab['telephone']); ?></div>
                 </div>
                 <?php endif; ?>
-                
+
                 <?php if ($etab['adresse']): ?>
                 <div class="contact-item">
                     <div class="contact-label">Adresse</div>
