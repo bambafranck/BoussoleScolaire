@@ -351,3 +351,218 @@
   .btn-action-primary:hover {
     transform: translateY(-2px);
   }
+
+  /* === RESPONSIVE MEDIA QUERIES === */
+
+  /* Tablettes (max 992px) */
+  @media (max-width: 992px) {
+    .result-hero {
+      padding: 60px 30px 50px;
+    }
+
+    .result-hero h1 {
+      font-size: 32px;
+    }
+
+    .main-content {
+      max-width: 800px;
+      grid-template-columns: 1fr;
+      padding: 0 20px 50px;
+    }
+
+    .score-circle {
+      width: 140px;
+      height: 140px;
+      margin: -70px auto 25px;
+    }
+
+    .score-ring {
+      width: 140px;
+      height: 140px;
+    }
+
+    .score-number {
+      font-size: 36px;
+    }
+  }
+
+  /* Mobiles (max 768px) */
+  @media (max-width: 768px) {
+    .result-hero {
+      padding: 50px 20px 40px;
+    }
+
+    .result-badge {
+      font-size: 12px;
+      padding: 5px 14px;
+    }
+
+    .result-hero h1 {
+      font-size: 28px;
+    }
+
+    .result-hero p {
+      font-size: 14px;
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      margin: -60px auto 20px;
+    }
+
+    .score-ring {
+      width: 120px;
+      height: 120px;
+    }
+
+    .score-number {
+      font-size: 32px;
+    }
+
+    .score-label {
+      font-size: 11px;
+    }
+
+    .main-content {
+      padding: 0 15px 40px;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: 16px;
+    }
+
+    .filiere-header {
+      padding: 16px 18px;
+    }
+
+    .filiere-icon {
+      width: 44px;
+      height: 44px;
+      font-size: 20px;
+    }
+
+    .filiere-info h4 {
+      font-size: 15px;
+    }
+
+    .filiere-info p {
+      font-size: 12px;
+    }
+
+    .filiere-match {
+      font-size: 13px;
+    }
+
+    .filiere-details {
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px 18px;
+    }
+
+    .card-box {
+      padding: 20px;
+    }
+
+    .skill-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .skill-label {
+      width: 100%;
+    }
+
+    .skill-bar-bg {
+      width: 100%;
+    }
+
+    .action-btns {
+      gap: 10px;
+    }
+
+    .btn-action,
+    .btn-action-primary {
+      padding: 11px 16px;
+      font-size: 13px;
+    }
+  }
+
+  /* Petits mobiles (max 480px) */
+  @media (max-width: 480px) {
+    .result-hero {
+      padding: 40px 15px 35px;
+    }
+
+    .result-hero h1 {
+      font-size: 24px;
+    }
+
+    .result-hero p {
+      font-size: 13px;
+    }
+
+    .score-circle {
+      width: 100px;
+      height: 100px;
+      margin: -50px auto 15px;
+    }
+
+    .score-ring {
+      width: 100px;
+      height: 100px;
+    }
+
+    .score-number {
+      font-size: 28px;
+    }
+
+    .main-content {
+      padding: 0 10px 30px;
+    }
+
+    .section-title {
+      font-size: 15px;
+    }
+
+    .filiere-card {
+      margin-bottom: 12px;
+    }
+
+    .filiere-header {
+      padding: 14px 16px;
+      gap: 12px;
+    }
+
+    .filiere-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+
+    .filiere-info h4 {
+      font-size: 14px;
+    }
+
+    .filiere-match {
+      font-size: 12px;
+    }
+
+    .card-box {
+      padding: 18px;
+    }
+
+    .skill-label {
+      font-size: 12px;
+    }
+
+    .skill-bar-bg {
+      height: 8px;
+    }
+
+    .skill-pct {
+      font-size: 12px;
+    }
+  }

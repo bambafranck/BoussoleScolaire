@@ -243,3 +243,135 @@
     background: var(--orange);
     box-shadow: 0 0 0 3px rgba(255, 140, 58, 0.25);
   }
+
+  /* === RESPONSIVE MEDIA QUERIES === */
+
+  /* Tablettes (max 992px) */
+  @media (max-width: 992px) {
+    .progress-header {
+      padding: 18px 30px;
+    }
+
+    main {
+      max-width: 680px;
+      padding: 0 20px;
+    }
+
+    .question-card {
+      padding: 38px 32px;
+    }
+
+    .question-card h2 {
+      font-size: 20px;
+    }
+
+    .side-steps {
+      right: 15px;
+    }
+  }
+
+  /* Mobiles (max 768px) */
+  @media (max-width: 768px) {
+    .progress-header {
+      padding: 15px 20px;
+    }
+
+    .progress-top {
+      margin-bottom: 12px;
+    }
+
+    .progress-title {
+      font-size: 14px;
+    }
+
+    .progress-count {
+      font-size: 12px;
+    }
+
+    main {
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .question-card {
+      padding: 30px 24px;
+    }
+
+    .question-card h2 {
+      font-size: 18px;
+    }
+
+    .question-card .question-hint {
+      font-size: 13px;
+    }
+
+    .option {
+      padding: 14px 16px;
+    }
+
+    .option-text {
+      font-size: 14px;
+    }
+
+    .option-sub {
+      font-size: 12px;
+    }
+
+    .question-nav {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+
+    .btn-prev,
+    .btn-next {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .side-steps {
+      display: none;
+    }
+  }
+
+  /* Petits mobiles (max 480px) */
+  @media (max-width: 480px) {
+    .progress-header {
+      padding: 12px 15px;
+    }
+
+    main {
+      margin: 20px auto;
+    }
+
+    .question-card {
+      padding: 24px 18px;
+    }
+
+    .question-badge {
+      font-size: 11px;
+      padding: 4px 12px;
+    }
+
+    .question-card h2 {
+      font-size: 16px;
+    }
+
+    .option {
+      padding: 12px 14px;
+      gap: 12px;
+    }
+
+    .option-icon {
+      font-size: 18px;
+    }
+
+    .option-text {
+      font-size: 13px;
+    }
+
+    .btn-prev,
+    .btn-next {
+      padding: 10px 24px;
+      font-size: 14px;
+    }
+  }

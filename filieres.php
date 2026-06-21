@@ -21,6 +21,46 @@ include 'includes/header.php';
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
+<style>
+/* Responsive styles pour la page filières */
+@media (max-width: 768px) {
+    div[style*="padding-top:100px"] {
+        padding-top: 80px !important;
+    }
+
+    div[style*="padding:40px 20px"] {
+        padding: 30px 15px !important;
+    }
+
+    div[style*="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    h1[style*="font-size:38px"] {
+        font-size: 28px !important;
+    }
+
+    p[style*="font-size:16px"] {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    div[style*="padding:40px 20px"] {
+        padding: 20px 10px !important;
+    }
+
+    h1[style*="font-size:38px"] {
+        font-size: 24px !important;
+    }
+
+    div[style*="padding:28px"] {
+        padding: 20px !important;
+    }
+}
+</style>
+
 <div class="page-indicator">
     <i data-lucide="radio" style="width:14px;height:14px;vertical-align:middle;margin-right:6px;"></i>
     Page : Filières (filieres.php)
