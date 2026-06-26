@@ -1,0 +1,332 @@
+/**
+ * BoussoleScolaire - Styles pour la page Contact
+ * Fichier: css/contact.css
+ */
+
+/* Hero Section */
+.contact-hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 100px 60px 60px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.contact-hero .gradient-text {
+    background: linear-gradient(135deg, #00c878, #ff8c3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-hero p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section principale */
+.contact-section {
+    background: #f9fafb;
+    padding: 80px 60px;
+}
+
+.contact-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* Formulaire */
+.contact-form-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-form-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.contact-form-card > p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Messages flash */
+.alert {
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #d1fae5;
+    border: 1px solid #10b981;
+    color: #065f46;
+}
+
+.alert-error {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+/* Champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #00c878;
+    box-shadow: 0 0 0 3px rgba(0, 200, 120, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #00c878, #00e88a);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 200, 120, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 200, 120, 0.4);
+}
+
+/* Cartes d'informations de contact */
+.contact-info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 24px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.contact-icon.email {
+    background: linear-gradient(135deg, rgba(0, 200, 120, 0.15), rgba(0, 200, 120, 0.05));
+}
+
+.contact-icon.phone {
+    background: linear-gradient(135deg, rgba(255, 140, 58, 0.15), rgba(255, 140, 58, 0.05));
+}
+
+.contact-icon.location {
+    background: linear-gradient(135deg, rgba(0, 200, 120, 0.15), rgba(255, 140, 58, 0.15));
+}
+
+.contact-info-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.contact-info-card p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.contact-link {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-link.email {
+    color: #00c878;
+}
+
+.contact-link.phone {
+    color: #ff8c3a;
+}
+
+.contact-address {
+    color: #374151;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Section FAQ */
+.faq-section {
+    background: #fff;
+    padding: 80px 60px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.faq-container > p {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.faq-link {
+    color: #00c878;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.faq-list {
+    text-align: left;
+}
+
+.faq-item {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.faq-item summary {
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 16px;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 80px 30px 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 32px;
+    }
+
+    .contact-section {
+        padding: 60px 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-card {
+        padding: 30px 20px;
+    }
+
+    .faq-section {
+        padding: 60px 30px;
+    }
+
+    .faq-container h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 60px 20px 30px;
+    }
+
+    .contact-hero h1 {
+        font-size: 26px;
+    }
+
+    .contact-hero p {
+        font-size: 15px;
+    }
+
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .contact-form-card h2 {
+        font-size: 22px;
+    }
+
+    .faq-section {
+        padding: 40px 20px;
+    }
+}
