@@ -239,17 +239,161 @@
     100% { width: 100%; }
   }
   
-  /* Responsive */
+  /* ============================================
+     RESPONSIVE DESIGN
+     ============================================ */
+
+  /* Tablettes larges (max-width: 992px) */
+  @media (max-width: 992px) {
+    body::before {
+      width: 400px;
+      height: 400px;
+      top: -150px;
+      left: -80px;
+    }
+
+    body::after {
+      width: 350px;
+      height: 350px;
+      bottom: -120px;
+      right: -70px;
+    }
+
+    .logout-container {
+      padding: 50px 40px;
+      max-width: 450px;
+    }
+
+    .logout-title {
+      font-size: 28px;
+    }
+  }
+
+  /* Tablettes (max-width: 768px) */
   @media (max-width: 768px) {
+    body::before {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -50px;
+    }
+
+    body::after {
+      width: 280px;
+      height: 280px;
+      bottom: -80px;
+      right: -40px;
+    }
+
     .logout-container {
       padding: 40px 30px;
+      max-width: 420px;
     }
-    
+
+    .logout-logo-text {
+      font-size: 22px;
+    }
+
+    .logout-logo-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+    }
+
+    .logout-icon {
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
     .logout-title {
       font-size: 26px;
     }
-    
+
     .logout-message {
       font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .btn-logout-primary,
+    .btn-logout-secondary {
+      padding: 12px 28px;
+      font-size: 15px;
+    }
+  }
+
+  /* Mobiles (max-width: 480px) */
+  @media (max-width: 480px) {
+    body::before {
+      width: 250px;
+      height: 250px;
+      top: -80px;
+      left: -30px;
+    }
+
+    body::after {
+      width: 220px;
+      height: 220px;
+      bottom: -60px;
+      right: -20px;
+    }
+
+    .logout-container {
+      padding: 30px 20px;
+      width: 95%;
+      border-radius: 20px;
+    }
+
+    .logout-logo {
+      margin-bottom: 24px;
+    }
+
+    .logout-logo-text {
+      font-size: 20px;
+    }
+
+    .logout-logo-icon {
+      width: 44px;
+      height: 44px;
+      font-size: 22px;
+      border-radius: 12px;
+    }
+
+    .logout-icon {
+      width: 70px;
+      height: 70px;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .logout-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .logout-message {
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .btn-logout-primary,
+    .btn-logout-secondary {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+
+    .countdown {
+      margin-top: 24px;
+      padding-top: 24px;
+      font-size: 13px;
+    }
+
+    .countdown strong {
+      font-size: 16px;
+    }
+
+    .loading-bar {
+      margin-top: 16px;
     }
   }

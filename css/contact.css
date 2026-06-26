@@ -274,6 +274,24 @@
 }
 
 /* Responsive Design */
+
+/* Tablettes larges (max-width: 992px) */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-section {
+        padding: 70px 50px;
+    }
+
+    .faq-section {
+        padding: 70px 50px;
+    }
+}
+
+/* Tablettes (max-width: 768px) */
 @media (max-width: 768px) {
     .contact-hero {
         padding: 80px 30px 40px;
@@ -288,7 +306,6 @@
     }
 
     .contact-grid {
-        grid-template-columns: 1fr;
         gap: 40px;
     }
 

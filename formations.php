@@ -6,7 +6,7 @@
 
 session_start();
 $page_title = "Formations";
-$page_css = "index";
+$page_css = "formations";
 require_once 'config/database.php';
 
 $stmt = $pdo->query("
@@ -45,23 +45,23 @@ include 'includes/header.php';
     Page : Formations (formations.php)
 </div>
 
-<div style="background:#fff; min-height:100vh; padding-top:100px;">
-    <div style="max-width:1200px; margin:0 auto; padding:40px 20px;">
-        
-        <div style="text-align:center; margin-bottom:50px;">
-            <div style="display:inline-flex; align-items:center; gap:8px; color:#ff8c3a; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:2px; margin-bottom:12px;">
-                <i data-lucide="graduation-cap" style="width:16px;height:16px;"></i>
+<div class="formations-page">
+    <div class="formations-container">
+
+        <div class="formations-header">
+            <div class="formations-badge">
+                <i data-lucide="graduation-cap"></i>
                 Offres de Formation
             </div>
-            <h1 style="font-family:'Poppins',sans-serif; font-size:38px; font-weight:800; color:#1a1a2e; margin-bottom:16px;">
-                Trouvez la <span style="background:linear-gradient(135deg,#00c878,#ff8c3a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">formation parfaite</span>
+            <h1>
+                Trouvez la <span class="gradient-text">formation parfaite</span>
             </h1>
-            <p style="color:#6b7280; font-size:16px; max-width:600px; margin:0 auto;">
+            <p>
                 Parcourez les formations disponibles dans nos établissements partenaires.
             </p>
         </div>
 
-        <div style="display:grid; gap:20px;">
+        <div class="formations-grid">
             <?php foreach ($formations as $formation): ?>
             <div style="background:#fff; border:2px solid #f0f0f0; border-radius:16px; padding:32px; transition:0.3s; cursor:pointer;"
                  onclick="window.location.href='detail_formation.php?id=<?php echo $formation['id_offre']; ?>'"

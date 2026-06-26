@@ -1,0 +1,229 @@
+/**
+ * BoussoleScolaire - Styles pour la page Formations
+ * Fichier: css/formations.css
+ */
+
+/* Réutilise les mêmes styles que filieres.css */
+@import url('filieres.css');
+
+/* Container principal */
+.formations-page {
+    background: #fff;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.formations-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* En-tête de la page */
+.formations-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.formations-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff8c3a;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.formations-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+.formations-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.formations-header .gradient-text {
+    background: linear-gradient(135deg, #00c878, #ff8c3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.formations-header p {
+    color: #6b7280;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grille de formations */
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Carte de formation */
+.formation-card {
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.formation-card:hover {
+    border-color: #ff8c3a;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 140, 58, 0.15);
+}
+
+.formation-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, rgba(255, 140, 58, 0.1), rgba(0, 200, 120, 0.05));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.formation-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #ff8c3a;
+    stroke-width: 1.5;
+}
+
+.formation-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.formation-card p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.formation-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ff8c3a;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: gap 0.3s;
+}
+
+.formation-link:hover {
+    gap: 10px;
+}
+
+.formation-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Design */
+
+/* Tablettes larges (max-width: 992px) */
+@media (max-width: 992px) {
+    .formations-container {
+        padding: 35px 30px;
+    }
+
+    .formations-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .formations-header h1 {
+        font-size: 34px;
+    }
+}
+
+/* Tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .formations-page {
+        padding-top: 80px;
+    }
+
+    .formations-container {
+        padding: 30px 15px;
+    }
+
+    .formations-header {
+        margin-bottom: 40px;
+    }
+
+    .formations-header h1 {
+        font-size: 28px;
+    }
+
+    .formations-header p {
+        font-size: 14px;
+    }
+
+    .formations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formation-card {
+        padding: 24px;
+    }
+}
+
+/* Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    .formations-container {
+        padding: 20px 10px;
+    }
+
+    .formations-header h1 {
+        font-size: 24px;
+    }
+
+    .formations-badge {
+        font-size: 12px;
+    }
+
+    .formation-card {
+        padding: 20px;
+    }
+
+    .formation-card h3 {
+        font-size: 18px;
+    }
+
+    .formation-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .formation-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
